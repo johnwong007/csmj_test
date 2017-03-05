@@ -1,0 +1,50 @@
+{
+  "master": {
+    "roothost": "localhost",
+    "rootport": 9999,
+    "webport": 9998
+  },
+  "servers": {
+    "gate": {
+      "rootport": 20001,
+      "name": "gate",
+      "app":"gate.apptest"
+    },
+    "net": {
+      "netport": 11000,
+      "name": "net",
+      "remoteport": [
+        {
+          "rootport": 20001,
+          "rootname": "gate"
+        }
+      ],
+      "app": "net.apptest"
+    },
+    "game": {
+      "netport": 11001,
+      "name": "game",
+      "remoteport": [
+        {
+          "rootport": 20001,
+          "rootname": "gate"
+        }
+      ],
+      "app": "game.apptest"
+    }
+  },
+  "db": {
+    "host": "localhost",
+    "user": "root",
+    "passwd": "111",
+    "port": 3306,
+    "db": "test",
+    "charset": "utf8"
+  },
+  "memcached": {
+    "urls": [
+      "127.0.0.1:11211"
+    ],
+    "hostname": "test"
+  }
+}
