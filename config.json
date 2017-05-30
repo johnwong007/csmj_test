@@ -23,6 +23,7 @@
     },
     "game": {
       "netport": 11001,
+      "webport": 11002,
       "name": "game",
       "remoteport": [
         {
